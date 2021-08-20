@@ -54,13 +54,14 @@ chargedDelivery.addEventListener('click', function () {
 // addEventListener for promo Code
 // promoInput
 applyButton.addEventListener('click', function () {
-    let promoCode = "steveKaku";
-    let discountAmount = 20 / 100 * parseFloat(grandTotal.innerText);
-    let newGrandTotal = parseFloat(grandTotal.innerText) - discountAmount;
+    let discountAmount = 20 / 100 * parseFloat(totalPrice.innerText);
+    let newGrandTotal = parseFloat(totalPrice.innerText) - discountAmount;
 
-    if (promoInput.value = promoCode) {
+    if (promoInput.value == "stevekaku") {
         grandTotal.innerText = newGrandTotal;
         promoInput.value = '';
+    } else {
+        alert('please enter write Promo Code');
     }
 })
 
